@@ -1,4 +1,3 @@
-
 # WantTrade 다운로드
 
 WantTrade는 mercury용 Trading MCP·DevTool MCP를 Claude Code, Claude Desktop 같은 AI 도구에 연결해 주는 Windows 프로그램입니다.
@@ -13,7 +12,7 @@ WantTrade는 mercury용 Trading MCP·DevTool MCP를 Claude Code, Claude Desktop 
 
 지원 환경: Windows 10/11 (64비트)
 
-설치한 뒤 설정 순서, 꼭 넣어야 하는 값, 문제 해결 방법은 [설치·설정 가이드](GUIDE.md)를 보세요.
+설치한 뒤 설정 순서, 꼭 넣어야 하는 값, 문제 해결 방법은 [설치·설정 가이드](GUIDE.md)를, 각 MCP에 들어 있는 도구는 [도구 목록](TOOLS.md)을 보세요.
 
 ## 업데이트
 
