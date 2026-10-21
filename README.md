@@ -16,7 +16,7 @@ WantTrade는 mercury용 Trading MCP·DevTool MCP를 Claude Code, Claude Desktop 
 
 ## 2.x에서 크게 바뀐 점
 
-| 항목 | 1.3.x | 2.4.0 |
+| 항목 | 1.3.x | 2.4.1 |
 | --- | --- | --- |
 | 화면 | 설정 화면 하나 | 로그인 화면 → 홈 화면. 설정은 톱니바퀴 |
 | 로그인 | 설정에 계좌 정보(`user_uid`, `acnt_cd`)를 넣음 | 앱에서 이름·생년월일·휴대폰번호로 로그인 |
