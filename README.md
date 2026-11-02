@@ -1,6 +1,6 @@
 # WantTrade 다운로드
 
-WantTrade는 mercury용 Trading MCP·DevTool MCP를 Claude Code, Claude Desktop 같은 AI 도구에 연결해 주는 Windows 프로그램입니다. 3.0.0부터는 한국투자증권(KIS) 모의투자에도 붙을 수 있습니다.
+WantTrade는 Trading MCP·DevTool MCP를 Claude Code, Claude Desktop 같은 AI 도구에 연결해 주는 Windows 프로그램입니다. Trading MCP는 한국투자증권(KIS) 모의투자 계좌로 국내·미국 주식을 조회하고 주문합니다. 실계좌는 붙지 않습니다.
 
 이 저장소에는 **설치 파일과 사용 설명서만** 올라옵니다. 소스 코드는 공개하지 않습니다.
 
@@ -13,6 +13,16 @@ WantTrade는 mercury용 Trading MCP·DevTool MCP를 Claude Code, Claude Desktop 
 지원 환경: Windows 10/11 (64비트)
 
 설치한 뒤 설정 순서, 로그인, 주문 승인, 문제 해결 방법은 [사용 설명서](GUIDE.md)를, AI가 쓸 수 있는 기능은 [도구 목록](TOOLS.md)을 보세요.
+
+로그인하려면 KIS Developers에서 신청한 모의투자 계좌번호와 그 계좌의 모의투자용 앱키·앱시크릿이 있어야 합니다.
+
+## 3.4.0에서 바뀐 점
+
+- **mercury 서버 연결이 없어지고 KIS 모의투자만 남았습니다.** 로그인은 KIS 앱키·앱시크릿·모의 계좌번호로만 합니다. 실계좌 모드와 Trading 설정의 접속 서버·모드 칸이 없어졌습니다.
+- 국내 주식의 현재가에 체결 시각이 함께 나옵니다(미국 주식은 비어 있음).
+- 블록 전략 승인 창의 기준 숫자에 쉼표와 단위가 붙습니다(예: "현재가가 40,000원 이하").
+- 앱 업데이트 설치를 미루는 장 시간이 평일 09:00~15:30(국내 장)으로 바뀌었습니다.
+- 자세한 것은 사용 설명서의 [3.3.0에서](GUIDE.md#330에서)를 보세요.
 
 ## 3.3.0에서 바뀐 점
 
@@ -79,7 +89,7 @@ WantTrade는 mercury용 Trading MCP·DevTool MCP를 Claude Code, Claude Desktop 
 
 설치한 뒤에는 따로 내려받을 필요가 없습니다. WantTrade가 시작할 때와 켜져 있는 동안 4시간마다 이 저장소에서 새 버전을 확인해 자동으로 받아 둡니다.
 
-- 장 시간(평일 09:00~20:00)에는 앱을 닫아도 설치하지 않습니다.
+- 장 시간(평일 09:00~15:30)에는 앱을 닫아도 설치하지 않습니다.
 - 장 시간이 아닐 때 앱을 닫거나 다음에 실행할 때 설치합니다.
 - 홈 화면 위쪽의 "재시작하여 업데이트"를 누르면 바로 설치할 수도 있습니다.
 
