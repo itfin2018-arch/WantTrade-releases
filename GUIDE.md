@@ -1,4 +1,4 @@
-# WantTrade 사용 설명서 (3.4.8)
+# WantTrade 사용 설명서 (3.4.9)
 
 WantTrade를 설치하고, 로그인하고, AI 도구로 조회와 주문을 하기까지의 순서를 정리한 문서입니다. 자주 생기는 문제와 해결 방법도 함께 있습니다.
 
@@ -10,6 +10,11 @@ Trading MCP는 **증권사 모의투자**에 붙습니다. 증권사 개발자 �
 AI가 쓸 수 있는 기능은 [도구 목록](TOOLS.md)에 따로 정리했습니다.
 
 ## 이전 버전에서 올라왔다면
+
+### 3.4.8에서
+
+- AI 도구에 등록되는 이름이 `wanttrade-trading`, `wanttrade-devtool`로 바뀌었습니다. 업데이트한 뒤 톱니바퀴 → **AI 도구에 추가**에서 도구마다 **다시 추가**를 누르세요. 누르기 전에도 예전 이름(`mercury-trading`, `mercury-devtool`)으로 그대로 쓸 수 있습니다. 다시 추가하면 예전 항목은 지워지고, AI 도구를 다시 시작하면 새 이름이 보입니다.
+- Claude Code 권한 설정에 도구 이름을 직접 적어 두었다면(`mcp__mercury-trading__api_call` 같은 이름) `mcp__wanttrade-trading__api_call`처럼 새 이름으로 바꾸세요.
 
 ### 3.4.7에서
 
@@ -368,7 +373,7 @@ WantTrade는 각 도구의 설정 파일을 직접 고칩니다. 고치기 전�
 
 AI 도구가 감지되지 않거나 Claude Desktop에 파일로 설치하고 싶을 때 씁니다.
 
-1. 톱니바퀴 → **3 MCPB 파일 만들기**에서 **.mcpb 만들기**를 누릅니다. `다운로드\WantTrade` 폴더에 `mercury-devtool.mcpb` 또는 `mercury-trading.mcpb`가 만들어집니다.
+1. 톱니바퀴 → **3 MCPB 파일 만들기**에서 **.mcpb 만들기**를 누릅니다. `다운로드\WantTrade` 폴더에 `wanttrade-devtool.mcpb` 또는 `wanttrade-trading.mcpb`가 만들어집니다.
 2. 만들어진 파일을 Claude Desktop 창에 끌어다 놓거나 **바로 설치**를 누릅니다.
 
 Trading MCP 파일에는 앱 서버 접속 토큰이 들어 있습니다(계좌 정보는 없음). 다른 사람과 공유하지 마세요.
@@ -700,6 +705,7 @@ WantTrade는 증권사 모의투자 계좌로 국내 주식과 미국 주식을 
 | 추가했는데 AI 도구에서 안 보임 | [추가한 뒤 할 일](#3-5-ai-도구에-추가) 표대로 도구를 다시 시작하거나 새로고침하세요 |
 | Cursor, VS Code, Windsurf, Gemini CLI, Codex CLI에서 Trading MCP가 연결되지 않음 | 이 도구들은 WantTrade가 켜져 있어야 연결됩니다(3.4.8부터). WantTrade를 켠 뒤 도구에서 서버를 다시 시작하거나 새로고침하세요 |
 | 도구 줄에 "예전 방식(브리지)으로 등록되어" 안내가 보임 | 3.4.7까지 추가한 항목입니다. 그대로 써도 됩니다. **다시 추가**를 누르면 WantTrade 프로세스를 따로 띄우지 않고 바로 연결합니다 |
+| 도구 줄에 "예전 이름(mercury-…)으로 등록되어" 안내가 보임 | 3.4.8까지의 이름(`mercury-trading`, `mercury-devtool`)으로 추가한 항목입니다. 그대로 써도 됩니다. **다시 추가**를 누르면 새 이름(`wanttrade-trading`, `wanttrade-devtool`)으로 바뀌고 예전 항목은 지워집니다. AI 도구를 다시 시작하면 새 이름이 보입니다 |
 | Claude Code에서 Trading MCP가 안 보임 | 매매 폴더에서 연 세션에서만 보이는 것이 정상입니다. 다른 폴더에서 쓰려면 폴더를 **변경**하세요. Trading MCP가 새 폴더로 옮겨지고, 새로 연 세션부터 보입니다 |
 | "추가했습니다"가 떴는데 Trading MCP 줄에 **추가** 버튼만 있음 (3.2.0까지) | 매매 폴더가 Git 저장소 안에 있으면 생기던 문제입니다. 새 버전으로 업데이트하거나, `C:\wt-trade`처럼 Git 저장소 밖의 새 폴더를 매매 폴더로 고르세요 |
 | "Claude Code에 등록할 폴더가 없습니다" | 고른 매매 폴더가 지워졌거나 옮겨졌습니다. 폴더를 다시 선택하세요 |

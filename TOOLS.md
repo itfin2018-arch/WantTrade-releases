@@ -1,11 +1,11 @@
-# WantTrade MCP 도구 목록 (3.4.8)
+# WantTrade MCP 도구 목록 (3.4.9)
 
 WantTrade가 AI 도구에 연결해 주는 두 MCP의 도구와 기능을 정리한 문서입니다. 도구나 기능 이름을 직접 부를 필요는 없습니다. AI에게 "삼성전자 호가 보여줘"처럼 말로 요청하면 AI가 맞는 기능을 골라 씁니다.
 
 | MCP | 이름 | 도구 수 | 서버 접속 |
 | --- | --- | --- | --- |
-| DevTool | `mercury-devtool` | 3개 (Trading과 같은 도구) | 하지 않음 (설명만 함) |
-| Trading | `mercury-trading` | 3개 | 함 (모의투자) |
+| DevTool | `wanttrade-devtool` | 3개 (Trading과 같은 도구) | 하지 않음 (설명만 함) |
+| Trading | `wanttrade-trading` | 3개 | 함 (모의투자) |
 
 Trading MCP는 도구가 3개뿐입니다. AI는 이 3개로 잔고·주문·시세·백테스트·블록 전략 **기능 33개**를 찾아서 부릅니다. 1.3.x의 도구 23개(`get_quote`, `place_order`, `run_backtest` 등)는 더 이상 보이지 않습니다.
 
@@ -288,6 +288,6 @@ asyncio.run(main())
 
 ## Claude Code에서 보이는 도구 이름
 
-Claude Code에서는 도구 이름 앞에 MCP 이름이 붙습니다 (예: `mcp__mercury-trading__api_call`). 권한 설정이나 `/mcp` 화면에서 이 이름으로 보입니다.
+Claude Code에서는 도구 이름 앞에 MCP 이름이 붙습니다 (예: `mcp__wanttrade-trading__api_call`, 3.4.8까지는 `mcp__mercury-trading__api_call`). 권한 설정이나 `/mcp` 화면에서 이 이름으로 보입니다.
 
 2.1.0부터 WantTrade는 Claude Code에 주문 권한을 따로 적지 않습니다. 주문은 WantTrade 창에서 승인해야 나갑니다. 1.3.x가 적어 둔 `confirm_order` 권한은 Trading MCP를 **다시 추가**하면 지워집니다.

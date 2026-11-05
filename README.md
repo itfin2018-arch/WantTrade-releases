@@ -16,6 +16,13 @@ WantTrade는 Trading MCP·DevTool MCP를 Claude Code, Claude Desktop 같은 AI �
 
 로그인하려면 증권사 개발자 사이트에서 신청한 모의투자 계좌번호와 그 계좌의 모의투자용 앱키·앱시크릿이 있어야 합니다.
 
+## 3.4.9에서 바뀐 점
+
+- AI 도구에 등록되는 이름이 `mercury-trading`, `mercury-devtool`에서 `wanttrade-trading`, `wanttrade-devtool`로 바뀌었습니다. AI 도구의 MCP 목록과 Claude Code의 `/mcp` 화면에도 새 이름으로 나옵니다.
+- 이미 추가해 둔 도구는 업데이트한 뒤에도 그대로 쓸 수 있습니다. 톱니바퀴 → AI 도구에 추가에서 "예전 이름(mercury-…)으로 등록되어" 안내가 보이면 **다시 추가**를 누르세요. 새 이름으로 바뀌고 예전 항목은 지워집니다. 그다음 AI 도구를 다시 시작하면 새 이름이 보입니다.
+- MCPB 파일 이름도 `wanttrade-trading.mcpb`, `wanttrade-devtool.mcpb`로 바뀌었습니다.
+- 앱 왼쪽 위 로고 아래 글자가 "Trading MCP"로 바뀌었습니다.
+
 ## 3.4.8에서 바뀐 점
 
 - Cursor, VS Code, Windsurf, Gemini CLI, Codex CLI도 Claude Code처럼 Trading MCP를 WantTrade에 바로 연결합니다. 예전에는 이 도구들이 Trading MCP용 WantTrade 프로세스를 하나씩 더 띄웠는데, 이제는 띄우지 않습니다. 대신 이 도구들은 꺼져 있는 WantTrade를 켜 주지 못하니 WantTrade를 먼저 켜 두세요. Claude Desktop은 예전처럼 꺼져 있는 WantTrade를 켜 줍니다.
