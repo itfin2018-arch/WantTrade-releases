@@ -1,4 +1,4 @@
-# WantTrade 사용 설명서 (3.4.7)
+# WantTrade 사용 설명서 (3.4.8)
 
 WantTrade를 설치하고, 로그인하고, AI 도구로 조회와 주문을 하기까지의 순서를 정리한 문서입니다. 자주 생기는 문제와 해결 방법도 함께 있습니다.
 
@@ -10,6 +10,12 @@ Trading MCP는 **증권사 모의투자**에 붙습니다. 증권사 개발자 �
 AI가 쓸 수 있는 기능은 [도구 목록](TOOLS.md)에 따로 정리했습니다.
 
 ## 이전 버전에서 올라왔다면
+
+### 3.4.7에서
+
+- Cursor, VS Code, Windsurf, Gemini CLI, Codex CLI에 추가해 둔 Trading MCP는 업데이트한 뒤에도 그대로 씁니다. 톱니바퀴 → **AI 도구에 추가**에서 그 도구 줄에 "예전 방식(브리지)으로 등록되어" 안내가 보이면 **다시 추가**를 누르세요. 그러면 도구가 WantTrade 프로세스를 따로 띄우지 않고 WantTrade에 바로 연결합니다.
+- 다시 추가한 뒤에는 이 도구들이 꺼져 있는 WantTrade를 켜 주지 않습니다. 도구를 쓰기 전에 WantTrade를 켜 두세요. 톱니바퀴 → Trading 설정의 **Windows 시작 시 트레이로 실행**을 켜 두면 따로 켤 일이 없습니다. Claude Desktop은 예전처럼 WantTrade를 켜 줍니다.
+- AI 도구가 띄우는 WantTrade 프로세스(DevTool MCP, Claude Desktop의 Trading MCP)는 다시 추가하면 작업 관리자에서 `WantTrade-Cursor-DevTool.exe`처럼 도구 이름을 달고 보입니다.
 
 ### 3.4.6에서
 
@@ -246,7 +252,7 @@ Trading MCP는 WantTrade 앱 서버를 거쳐 AI 도구에 연결됩니다.
 - 창을 닫아도 WantTrade는 꺼지지 않고 작업 표시줄 오른쪽 아래 트레이에 남습니다. 앱 서버와 로그인도 그대로 유지됩니다.
 - 다시 열려면 트레이 아이콘을 우클릭하고 **WantTrade 열기**를 누릅니다. 완전히 끄려면 **종료**를 누릅니다.
 - 트레이 메뉴에는 로그인 상태, 모드(모의), Trading MCP를 추가한 AI 도구 수가 보이고, **긴급 정지**도 켜고 끌 수 있습니다.
-- WantTrade가 꺼져 있으면 Claude Desktop, Cursor 같은 도구는 WantTrade를 트레이로 자동으로 켭니다. 이때는 창이 뜨지 않으니 트레이에서 열어 로그인하세요. Claude Code는 WantTrade가 켜져 있어야 연결됩니다.
+- WantTrade가 꺼져 있으면 Claude Desktop은 WantTrade를 트레이로 자동으로 켭니다. 이때는 창이 뜨지 않으니 트레이에서 열어 로그인하세요. Claude Code, Cursor, VS Code, Windsurf, Gemini CLI, Codex CLI는 WantTrade가 켜져 있어야 연결되니 먼저 켜 두세요.
 - 톱니바퀴 → Trading 설정의 **Windows 시작 시 트레이로 실행**을 켜 두면 PC를 켤 때 자동으로 시작합니다.
 
 ## 3. 처음 설정
@@ -344,6 +350,7 @@ WantTrade는 로그인할 때 넣은 모의 계좌 하나만 씁니다. 홈 화�
 - **Claude Code**에 Trading MCP를 추가할 때는 **매매 폴더**를 먼저 고릅니다. Trading MCP는 그 폴더에서 Claude Code를 열었을 때만 보입니다. 다른 프로젝트에서 주문 기능이 실수로 쓰이지 않게 하려는 장치입니다. DevTool MCP는 모든 폴더에서 보입니다.
 - 매매 폴더가 Git 저장소 안에 있으면(위쪽 폴더에 숨김 폴더 `.git`이 있으면) Claude Code는 **저장소 전체**에서 Trading MCP를 보여 줍니다. Claude Code가 저장소 단위로 설정을 두기 때문입니다. 폴더 이름에 마우스를 올리면 어느 저장소인지 보입니다. 3.2.0까지는 이때 Trading MCP가 등록되자마자 지워졌습니다.
 - 매매 폴더는 하나입니다. **변경**으로 폴더를 바꾸면 Trading MCP를 새 폴더로 옮기고 예전 폴더에서는 지웁니다. **제거**를 누르면 예전 버전이 다른 폴더에 남긴 Trading MCP까지 지웁니다.
+- Claude Code, Cursor, VS Code, Windsurf, Gemini CLI, Codex CLI의 Trading MCP는 WantTrade가 켜져 있을 때만 연결됩니다. Claude Desktop은 WantTrade가 꺼져 있으면 트레이로 켭니다.
 - 추가한 뒤에는 도구마다 적용 방법이 다릅니다.
 
 | AI 도구 | 추가한 뒤 할 일 |
@@ -691,6 +698,8 @@ WantTrade는 증권사 모의투자 계좌로 국내 주식과 미국 주식을 
 | Claude Code 항목에 `confirm_order`가 보임 | 1.3.x에서 적어 둔 주문 권한입니다. 2.x에서는 쓰지 않습니다. **다시 추가**를 누르면 지워집니다 |
 | "이전 버전 항목"과 **정리** 버튼이 보임 | 예전 버전에서 등록한 항목입니다. **정리**를 누르면 지워집니다 |
 | 추가했는데 AI 도구에서 안 보임 | [추가한 뒤 할 일](#3-5-ai-도구에-추가) 표대로 도구를 다시 시작하거나 새로고침하세요 |
+| Cursor, VS Code, Windsurf, Gemini CLI, Codex CLI에서 Trading MCP가 연결되지 않음 | 이 도구들은 WantTrade가 켜져 있어야 연결됩니다(3.4.8부터). WantTrade를 켠 뒤 도구에서 서버를 다시 시작하거나 새로고침하세요 |
+| 도구 줄에 "예전 방식(브리지)으로 등록되어" 안내가 보임 | 3.4.7까지 추가한 항목입니다. 그대로 써도 됩니다. **다시 추가**를 누르면 WantTrade 프로세스를 따로 띄우지 않고 바로 연결합니다 |
 | Claude Code에서 Trading MCP가 안 보임 | 매매 폴더에서 연 세션에서만 보이는 것이 정상입니다. 다른 폴더에서 쓰려면 폴더를 **변경**하세요. Trading MCP가 새 폴더로 옮겨지고, 새로 연 세션부터 보입니다 |
 | "추가했습니다"가 떴는데 Trading MCP 줄에 **추가** 버튼만 있음 (3.2.0까지) | 매매 폴더가 Git 저장소 안에 있으면 생기던 문제입니다. 새 버전으로 업데이트하거나, `C:\wt-trade`처럼 Git 저장소 밖의 새 폴더를 매매 폴더로 고르세요 |
 | "Claude Code에 등록할 폴더가 없습니다" | 고른 매매 폴더가 지워졌거나 옮겨졌습니다. 폴더를 다시 선택하세요 |

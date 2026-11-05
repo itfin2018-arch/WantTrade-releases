@@ -16,6 +16,12 @@ WantTrade는 Trading MCP·DevTool MCP를 Claude Code, Claude Desktop 같은 AI �
 
 로그인하려면 증권사 개발자 사이트에서 신청한 모의투자 계좌번호와 그 계좌의 모의투자용 앱키·앱시크릿이 있어야 합니다.
 
+## 3.4.8에서 바뀐 점
+
+- Cursor, VS Code, Windsurf, Gemini CLI, Codex CLI도 Claude Code처럼 Trading MCP를 WantTrade에 바로 연결합니다. 예전에는 이 도구들이 Trading MCP용 WantTrade 프로세스를 하나씩 더 띄웠는데, 이제는 띄우지 않습니다. 대신 이 도구들은 꺼져 있는 WantTrade를 켜 주지 못하니 WantTrade를 먼저 켜 두세요. Claude Desktop은 예전처럼 꺼져 있는 WantTrade를 켜 줍니다.
+- 예전에 추가한 도구도 그대로 쓸 수 있습니다. 톱니바퀴 → AI 도구에 추가에서 그 도구의 **다시 추가**를 누르면 새 방식으로 바뀝니다.
+- AI 도구가 띄우는 WantTrade 프로세스(모든 도구의 DevTool MCP, Claude Desktop의 Trading MCP)가 작업 관리자에서 `WantTrade-Cursor-DevTool.exe`처럼 도구 이름을 달고 보입니다. 앱 본체 `WantTrade.exe`와 헷갈리지 않습니다. 이미 추가한 도구는 **다시 추가**를 눌러야 이렇게 보입니다.
+
 ## 3.4.7에서 바뀐 점
 
 - 블록 전략 백테스트가 정해 둔 가격에 거는 주문(그리드, 분할 매수, 고정 지정가 주문)을 실제처럼 계산합니다. 그날 가격이 주문 가격에 닿아야 체결로 칩니다. 예전에는 가격이 닿지 않아도 체결로 보아서, 매도 가격이 그날 고가보다 높은 그리드도 사고팔아 수익을 낸 것으로 나왔습니다. 장 마감까지 닿지 않은 주문은 그날 끝나고, 그리드는 거기서 멈춥니다. 앱에서 실제로 돌릴 때와 같습니다. 결과에는 주문마다 체결된 수량이 함께 나옵니다.
